@@ -81,6 +81,11 @@
                     <h3>🏙️ 城区信任度</h3>
                     <div id="districtTrust" class="district-trust"></div>
                 </div>
+
+                <div class="panel-section">
+                    <h3>⚠️ 城区风险等级</h3>
+                    <div id="districtRisk" class="district-risk"></div>
+                </div>
             </aside>
 
             <main class="center-panel">
@@ -88,6 +93,7 @@
                     <button class="tab-btn active" data-tab="schedule">📅 节目编排</button>
                     <button class="tab-btn" data-tab="broadcast">📢 播报消息</button>
                     <button class="tab-btn" data-tab="qa">❓ 听众问答</button>
+                    <button class="tab-btn" data-tab="soundwave">🎙️ 声纹档案</button>
                     <button class="tab-btn" data-tab="repair">🔧 设备维修</button>
                     <button class="tab-btn" data-tab="rumor">🚫 谣言压制</button>
                     <button class="tab-btn" data-tab="settlement">📊 结算记录</button>
@@ -137,6 +143,47 @@
                         <div class="question-history" id="questionHistory">
                             <h4>已回答问题</h4>
                             <div id="historyList"></div>
+                        </div>
+                    </div>
+
+                    <div id="soundwave" class="tab-pane">
+                        <h3>🎙️ 城市声纹档案</h3>
+                        <div class="soundwave-controls">
+                            <div class="soundwave-scan">
+                                <h4>📡 扫描城区声纹</h4>
+                                <p class="hint">选择城区进行声纹扫描，收集背景声音样本。设备状态和通讯技能会影响分析质量。</p>
+                                <div class="scan-select">
+                                    <select id="scanDistrict">
+                                        <option value="">-- 选择城区 --</option>
+                                    </select>
+                                    <select id="scanSurvivor">
+                                        <option value="">-- 分配分析员 --</option>
+                                    </select>
+                                    <button id="scanBtn" class="btn btn-primary">开始扫描 (⚡8)</button>
+                                </div>
+                                <p class="scan-limit" id="scanLimit">今日剩余扫描次数: 3</p>
+                            </div>
+                        </div>
+
+                        <div class="soundwave-pending" id="soundwavePending">
+                            <h4>⏳ 待分析样本</h4>
+                            <div id="pendingList" class="pending-list">
+                                <p style="color:#888; text-align:center; padding:20px">暂无待分析样本</p>
+                            </div>
+                        </div>
+
+                        <div class="soundwave-observation" id="soundwaveObservation">
+                            <h4>📝 暂存观察</h4>
+                            <div id="observationList" class="observation-list">
+                                <p style="color:#888; text-align:center; padding:20px">暂无暂存观察</p>
+                            </div>
+                        </div>
+
+                        <div class="soundwave-archive">
+                            <h4>📚 声纹档案库</h4>
+                            <div id="archiveList" class="archive-list">
+                                <p style="color:#888; text-align:center; padding:20px">档案库为空，快去收集声纹吧！</p>
+                            </div>
                         </div>
                     </div>
 
